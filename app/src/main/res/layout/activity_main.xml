@@ -52,20 +52,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            style="@style/TextInputLayoutStyle">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextTextUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:hint="Username"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/black"
                 android:layout_marginTop="@dimen/medium_margin"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            style="@style/TextInputLayoutStyle">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextTextPassword"
             android:layout_width="match_parent"
