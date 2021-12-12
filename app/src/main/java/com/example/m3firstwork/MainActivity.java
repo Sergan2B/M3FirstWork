@@ -34,33 +34,17 @@ public class MainActivity extends AppCompatActivity {
         Glide.with(this).load("https://i.pinimg.com/474x/23/ab/a6/23aba60b66ef08174bb7455c4a8a2d2f.jpg").into(image);
         getBtnGo = findViewById(R.id.button);
         getBtnGo.setOnClickListener(view -> {
-            Intent takePhotoIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            try{
-                startActivityForResult(takePhotoIntent, REQUEST_TAKE_PHOTO);
-            }catch (ActivityNotFoundException e){
-                e.printStackTrace();
-            }
             Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-            ed1 = (EditText)findViewById(R.id.editTextTextUsername);
-            ed2 = (EditText)findViewById(R.id.editTextTextPassword);
+            ed1 = findViewById(R.id.editTextTextUsername);
+            ed2 = findViewById(R.id.editTextTextPassword);
             if (ed1.getText().length() < 6 && ed2.getText().length() < 6) {
                 Toast.makeText(getApplicationContext(), "Ошибка, ваш пароль или ваш логин слишком короткий", Toast.LENGTH_SHORT).show();
             } else{
                 Toast.makeText(getApplicationContext(), "Подключение...",Toast.LENGTH_SHORT).show();
-                intent.putExtra("keyUsername", ed1.toString());
-                intent.putExtra("keyPassword", ed1.toString());
+                intent.putExtra("keyUsername", ed1.getText().toString());
+                intent.putExtra("keyPassword", ed2.getText().toString());
                 startActivity(intent);
             }
         });
-    }
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_TAKE_PHOTO && resultCode == RESULT_OK) {
-            Bundle extras = data.getExtras();
-            Bitmap picturePhoto = (Bitmap) extras.get("data");
-            image.setImageBitmap(picturePhoto);
-            Glide.with(this).load(picturePhoto).into(image);
-        }
     }
 }

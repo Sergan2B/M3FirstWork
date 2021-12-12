@@ -19,22 +19,23 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            app:civ_border_color="@android:color/transparent"
+            app:civ_border_width="@dimen/_1sdp"
             android:layout_gravity="center"
-            app:cardCornerRadius="8dp"
-            android:layout_margin="5dp"
-            android:elevation="10dp"
-            android:paddingVertical="@dimen/small_margin" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textChangeBio"/>
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/buttonEditImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:paddingVertical="@dimen/small_margin"
+            android:paddingVertical="@dimen/normal_margin"
+            android:paddingHorizontal="@dimen/large_margin"
             android:text="Edit Photo"
             android:textColor="@color/purple_500"
             android:background="@android:color/transparent"
@@ -48,8 +49,10 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Username"
+            android:textColor="@color/black"
             android:inputType="textPersonName"
-            android:paddingVertical="@dimen/small_margin"
+            android:paddingVertical="@dimen/normal_margin"
+            android:paddingHorizontal="@dimen/large_margin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button3" />
@@ -60,8 +63,10 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Surname"
+            android:textColor="@color/black"
             android:inputType="textPersonName"
-            android:paddingVertical="@dimen/small_margin"
+            android:paddingVertical="@dimen/normal_margin"
+            android:paddingHorizontal="@dimen/large_margin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/TextViewPersonName" />
@@ -70,7 +75,8 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingVertical="@dimen/small_margin"
+            android:paddingVertical="@dimen/normal_margin"
+            android:paddingHorizontal="@dimen/large_margin"
             android:text="Private information"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -82,8 +88,10 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Email address"
+            android:textColor="@color/black"
             android:inputType="textEmailAddress"
-            android:paddingVertical="@dimen/small_margin"
+            android:paddingVertical="@dimen/normal_margin"
+            android:paddingHorizontal="@dimen/large_margin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -95,7 +103,9 @@
             android:ems="10"
             android:hint="Phone number"
             android:inputType="phone"
-            android:paddingVertical="@dimen/small_margin"
+            android:textColor="@color/black"
+            android:paddingVertical="@dimen/normal_margin"
+            android:paddingHorizontal="@dimen/large_margin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/TextViewEmailAddress" />
@@ -107,7 +117,9 @@
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword"
-            android:paddingVertical="@dimen/small_margin"
+            android:textColor="@color/black"
+            android:paddingVertical="@dimen/normal_margin"
+            android:paddingHorizontal="@dimen/large_margin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/TextViewPhone1" />
