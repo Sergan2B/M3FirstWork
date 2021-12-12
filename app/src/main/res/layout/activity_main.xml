@@ -52,7 +52,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            style="@style/TextInputLayoutStyle">
+            style="@style/TextInputLayoutStyle"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/ErrorTextAppearance">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextTextUsername"
                 android:layout_width="match_parent"
@@ -96,7 +98,6 @@
             android:layout_height="wrap_content"
             android:text="GO"
             android:backgroundTint="@color/black"
-            android:enabled="false"
             android:textColor="@color/white"/>
 
         <TextView
